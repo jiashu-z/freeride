@@ -211,13 +211,8 @@ class ImageWorkloadMeta(WorkloadMeta):
 
 models = [
     "resnet18",
-    # "resnet34",
     "resnet50",
-    # "resnet101",
-    # "resnet152",
     "vgg19",
-    # "lstm",
-    # "transformer",
 ]
 side_task_types = ["training"]
 implementation_types = ["iterative"]

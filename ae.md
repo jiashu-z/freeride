@@ -229,6 +229,36 @@ python3 ae/vanilla_deepspeed_profile/analyze_bubbles.py
 
 This script will generate a CSV file in each directory, which contains the summary of bubbles.
 
+# Profiling of Side Tasks
+
+Run the following script to profile the side tasks for their performance and GPU memory consumption.
+
+```bash
+export CUDA_HOME=$CONDA_PREFIX
+python3 ae/profile_side_task/run.py
+```
+
+This script will run side tasks, including resnet18, resnet50, and vgg19 model training with different batch sizes for Python workloads and image resizing, pagerank, and sgd for C++ workloads. Step time and memory consumption of side tasks will be collected with nvml.
+After it finishes, you will see the output as four files for each side task.
+
+```
+(freeride) root@cd4b629f2bb9:/workspace/bubblebandit# ls schedule_ada6000_resnet18_training_iterative_16_*
+schedule_ada6000_resnet18_training_iterative_16_0_side_task.txt
+schedule_ada6000_resnet18_training_iterative_16_0_task.log
+schedule_ada6000_resnet18_training_iterative_16_bubble_time.txt
+schedule_ada6000_resnet18_training_iterative_16_monitor.txt
+schedule_ada6000_resnet18_training_iterative_16_scheduler.log
+schedule_ada6000_resnet18_training_iterative_16_time_profile_0.txt
+```
+
+Run the following script to analyze the side tasks and generate side task summary.
+
+```bash
+python3 ae/profile_side_task/process_results.py
+```
+
+This script will generate a json file with name `iterative_summary_ada6000.json` containing the summary of side tasks
+
 # Run Vanilla DeepSpeed as Baseline
 
 Install vanilla DeepSpeed 0.12.2.
@@ -252,16 +282,6 @@ You will see the output json files in the `log` directory.
 They are the performance measurements from 4 pipeline stages.
 We use stage 0 as the final result.
 The training time is found in the `time` field of the performance measurement outputs.
-
-# Profile Side Tasks
-
-Run the following command to profile the side tasks for their performance and GPU memory consumption.
-
-```bash
-python3 ae/profile_side_task/run.py
-```
-
-After it finishes, you will see the 
 
 # Run DeepSpeed with Side Tasks
 
@@ -348,7 +368,24 @@ We focus on the `time` field, which measures the time in seconds taken by the pi
 }
 ```
 
+# Calculate the Overhead and Saving
+After collecting output of freeride deepspeed with side tasks and vanilla deepspeed, run the notebook `ae/collect_experiment_data/analyze_cost.ipynb` to parse the output time and side task progress. It will calculate the overhead and cost saving of freeride on each side task.
 
+```
+resnet18: hourly_cost: 20.226, main-task overhead: 0.03%, dollar saving: 8.07%
+resnet50: hourly_cost: 20.7151, main-task overhead: 1.36%, dollar saving: 5.92%
+vgg19: hourly_cost: 20.85, main-task overhead: 2.1%, dollar saving: 5.34%
+sgd: hourly_cost: 17.6782, main-task overhead: 1.16%, dollar saving: 19.87%
+pr: hourly_cost: 21.3282, main-task overhead: 0.05%, dollar saving: 3.06%
+image: hourly_cost: 20.9415, main-task overhead: 0.74%, dollar saving: 4.85%
+Mix_task(pr): side_task_progress: 12107
+Mix_task(resnet18): side_task_progress: 217152
+Mix_task(image): side_task_progress: 1597
+Mix_task(vgg19): side_task_progress: 64448
+Mix_task(all): main-task overhead: 1.57%, dollar saving: 6.15%
+```
+
+The output contain hourly cost, main task ovehead, and dollar saving for each single task and side task progress, main task overhead, and total dollar saving for mixed task.
 
 
 
@@ -385,9 +422,4 @@ cd4b629f2bb9_183393.1759465221196843501.pt.trace.json  cd4b629f2bb9_183395.17594
 cd4b629f2bb9_183394.1759465221708615824.pt.trace.json  cd4b629f2bb9_183396.1759465219619013456.pt.trace.json
 ```
 
-# Profiling of Side Tasks
 
-
-
-# Calculate the Overhead and Saving
-Run the notebook `ae/collect_experiment_data/analyze_cost.ipynb` to parse the output time and side task progress. It will calculate the overhead and cost saving of freeride.
