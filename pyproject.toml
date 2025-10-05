@@ -1,0 +1,30 @@
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    "grpcio-tools==1.60.0",
+]
+build-backend = "setuptools.build_meta"
+[project]
+name = "freeride"
+version = "0.0.1"
+authors = [
+  { name="Jiashu Zhang", email="jiashu.zhang@uwaterloo.ca" },
+  { name="Zihan Pan", email="z82pan@uwaterloo.ca" },
+  { name="Molly (Yiming) Xu", email="molly.xu@uwaterloo.ca" },
+  { name="Khuzaima Daudjee", email="khuzaima.daudjee@uwaterloo.ca" },
+  { name="Sihang Liu", email="sihangliu@uwaterloo.ca" },
+]
+description = "XXX"
+readme = "readme.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "grpcio",
+]
+[project.urls]
+Homepage = "https://github.com/pypa/sampleproject"
+Issues = "https://github.com/pypa/sampleproject/issues"

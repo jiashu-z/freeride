@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+service TaskRunner {
+    rpc AddTaskToRunner (AddTaskToRunnerArgs) returns (AddTaskToRunnerReply) {}
+
+    rpc StopTaskOnRunner (StopTaskOnRunnerArgs) returns (StopTaskOnRunnerReply) {}
+
+    rpc StopAllTasks (StopAllTasksArgs) returns (StopAllTasksReply) {}
+
+    rpc FinishTaskOnRunner (FinishTaskOnRunnerArgs) returns (FinishTaskOnRunnerReply) {}
+}
+
+message AddTaskToRunnerArgs {
+    int64 task_id = 1;
+    string name = 2;
+    string scheduler_addr = 3;
+    string cmd = 4;
+}
+
+message AddTaskToRunnerReply {
+    int64 status = 1;
+    string addr = 2;
+    string device_name = 3;
+}
+
+message StopTaskOnRunnerArgs {
+    int64 task_id = 1;
+}
+
+message StopTaskOnRunnerReply {
+    int64 status = 1;
+}
+
+message StopAllTasksArgs {
+
+}
+
+message StopAllTasksReply {
+    int64 status = 1;
+}
+
+message FinishTaskOnRunnerArgs {
+    int64 task_id = 1;
+}
+
+message FinishTaskOnRunnerReply {
+    int64 status = 1;
+}
