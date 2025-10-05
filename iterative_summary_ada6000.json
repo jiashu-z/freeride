@@ -1,0 +1,905 @@
+{
+    "resnet18_training_iterative_8": {
+        "max_allocated_memory": 1628045312.0,
+        "max_reserved_memory": 1628045312.0,
+        "avg_energy_consumption": 52.77299898590678,
+        "avg_step_time": 0.013532601505796486,
+        "median_step_time": 0.012800812721252441
+    },
+    "resnet18_training_iterative_16": {
+        "max_allocated_memory": 1837760512.0,
+        "max_reserved_memory": 1837760512.0,
+        "avg_energy_consumption": 82.44446922536099,
+        "avg_step_time": 0.011508190296065639,
+        "median_step_time": 0.010533452033996582
+    },
+    "resnet18_training_iterative_32": {
+        "max_allocated_memory": 2504654848.0,
+        "max_reserved_memory": 2504654848.0,
+        "avg_energy_consumption": 105.37650827601212,
+        "avg_step_time": 0.014727926675985678,
+        "median_step_time": 0.014285087585449219
+    },
+    "resnet18_training_iterative_48": {
+        "max_allocated_memory": 3127508992.0,
+        "max_reserved_memory": 3127508992.0,
+        "avg_energy_consumption": 105.64553459042709,
+        "avg_step_time": 0.02237014471088041,
+        "median_step_time": 0.021865367889404297
+    },
+    "resnet18_training_iterative_64": {
+        "max_allocated_memory": 3897163776.0,
+        "max_reserved_memory": 3897163776.0,
+        "avg_energy_consumption": 100.34974429016096,
+        "avg_step_time": 0.031112370497164733,
+        "median_step_time": 0.03061842918395996
+    },
+    "resnet18_training_iterative_80": {
+        "max_allocated_memory": 4652138496.0,
+        "max_reserved_memory": 4652138496.0,
+        "avg_energy_consumption": 100.72541526783728,
+        "avg_step_time": 0.03837520579810398,
+        "median_step_time": 0.038291215896606445
+    },
+    "resnet18_training_iterative_96": {
+        "max_allocated_memory": 5308547072.0,
+        "max_reserved_memory": 5308547072.0,
+        "avg_energy_consumption": 100.19306818091073,
+        "avg_step_time": 0.048449991717196925,
+        "median_step_time": 0.048352718353271484
+    },
+    "resnet18_training_iterative_112": {
+        "max_allocated_memory": 6002704384.0,
+        "max_reserved_memory": 6002704384.0,
+        "avg_energy_consumption": 100.68758205622925,
+        "avg_step_time": 0.05576669140295549,
+        "median_step_time": 0.05644857883453369
+    },
+    "resnet18_training_iterative_128": {
+        "max_allocated_memory": 6705250304.0,
+        "max_reserved_memory": 6705250304.0,
+        "avg_energy_consumption": 98.64276808253261,
+        "avg_step_time": 0.0645640071608576,
+        "median_step_time": 0.06551051139831543
+    },
+    "resnet34_training_iterative_8": {
+        "max_allocated_memory": 1873412096.0,
+        "max_reserved_memory": 1873412096.0,
+        "avg_energy_consumption": 60.9685464569062,
+        "avg_step_time": 0.021086901637679296,
+        "median_step_time": 0.02234673500061035
+    },
+    "resnet34_training_iterative_16": {
+        "max_allocated_memory": 2211053568.0,
+        "max_reserved_memory": 2211053568.0,
+        "avg_energy_consumption": 85.45695034023717,
+        "avg_step_time": 0.020619473659981877,
+        "median_step_time": 0.017800569534301758
+    },
+    "resnet34_training_iterative_32": {
+        "max_allocated_memory": 2955542528.0,
+        "max_reserved_memory": 2955542528.0,
+        "avg_energy_consumption": 105.94210926282317,
+        "avg_step_time": 0.02356176987070168,
+        "median_step_time": 0.022934675216674805
+    },
+    "resnet34_training_iterative_48": {
+        "max_allocated_memory": 3716808704.0,
+        "max_reserved_memory": 3716808704.0,
+        "avg_energy_consumption": 103.40738871835502,
+        "avg_step_time": 0.03440377357158255,
+        "median_step_time": 0.03409528732299805
+    },
+    "resnet34_training_iterative_64": {
+        "max_allocated_memory": 4679401472.0,
+        "max_reserved_memory": 4679401472.0,
+        "avg_energy_consumption": 104.39486479113857,
+        "avg_step_time": 0.04374782543455828,
+        "median_step_time": 0.043583035469055176
+    },
+    "resnet34_training_iterative_80": {
+        "max_allocated_memory": 5549719552.0,
+        "max_reserved_memory": 5549719552.0,
+        "avg_energy_consumption": 103.71940961139293,
+        "avg_step_time": 0.05576393875208768,
+        "median_step_time": 0.05597114562988281
+    },
+    "resnet34_training_iterative_96": {
+        "max_allocated_memory": 6367608832.0,
+        "max_reserved_memory": 6367608832.0,
+        "avg_energy_consumption": 102.09523835561318,
+        "avg_step_time": 0.07078908846296113,
+        "median_step_time": 0.07198917865753174
+    },
+    "resnet34_training_iterative_112": {
+        "max_allocated_memory": 7242121216.0,
+        "max_reserved_memory": 7242121216.0,
+        "avg_energy_consumption": 103.42129144768371,
+        "avg_step_time": 0.08064873156204723,
+        "median_step_time": 0.08322572708129883
+    },
+    "resnet34_training_iterative_128": {
+        "max_allocated_memory": 8125022208.0,
+        "max_reserved_memory": 8125022208.0,
+        "avg_energy_consumption": 104.53582524950006,
+        "avg_step_time": 0.09364968267354098,
+        "median_step_time": 0.09708893299102783
+    },
+    "resnet50_training_iterative_8": {
+        "max_allocated_memory": 2592735232.0,
+        "max_reserved_memory": 2592735232.0,
+        "avg_energy_consumption": 58.90691166877877,
+        "avg_step_time": 0.03230647092190222,
+        "median_step_time": 0.03335404396057129
+    },
+    "resnet50_training_iterative_16": {
+        "max_allocated_memory": 3125411840.0,
+        "max_reserved_memory": 3125411840.0,
+        "avg_energy_consumption": 101.86028895499071,
+        "avg_step_time": 0.02531092956599304,
+        "median_step_time": 0.022937536239624023
+    },
+    "resnet50_training_iterative_32": {
+        "max_allocated_memory": 4511629312.0,
+        "max_reserved_memory": 4511629312.0,
+        "avg_energy_consumption": 106.68975091836437,
+        "avg_step_time": 0.04089019642580276,
+        "median_step_time": 0.04059898853302002
+    },
+    "resnet50_training_iterative_48": {
+        "max_allocated_memory": 6111756288.0,
+        "max_reserved_memory": 6111756288.0,
+        "avg_energy_consumption": 106.07877968235111,
+        "avg_step_time": 0.0643944515607744,
+        "median_step_time": 0.06512713432312012
+    },
+    "resnet50_training_iterative_64": {
+        "max_allocated_memory": 8064204800.0,
+        "max_reserved_memory": 8064204800.0,
+        "avg_energy_consumption": 106.30975994443854,
+        "avg_step_time": 0.08666640750148841,
+        "median_step_time": 0.08894491195678711
+    },
+    "resnet50_training_iterative_80": {
+        "max_allocated_memory": 9578348544.0,
+        "max_reserved_memory": 9578348544.0,
+        "avg_energy_consumption": 106.7194703335896,
+        "avg_step_time": 0.10957983215298273,
+        "median_step_time": 0.11470377445220947
+    },
+    "resnet50_training_iterative_96": {
+        "max_allocated_memory": 11325276160.0,
+        "max_reserved_memory": 11325276160.0,
+        "avg_energy_consumption": 108.12599604561586,
+        "avg_step_time": 0.1366646551823878,
+        "median_step_time": 0.1406540870666504
+    },
+    "resnet50_training_iterative_112": {
+        "max_allocated_memory": 12818448384.0,
+        "max_reserved_memory": 12818448384.0,
+        "avg_energy_consumption": 108.58279925200367,
+        "avg_step_time": 0.1601609923900702,
+        "median_step_time": 0.16587185859680176
+    },
+    "resnet50_training_iterative_128": {
+        "max_allocated_memory": 14206763008.0,
+        "max_reserved_memory": 14206763008.0,
+        "avg_energy_consumption": 108.94531992826802,
+        "avg_step_time": 0.18377739366363077,
+        "median_step_time": 0.19258975982666016
+    },
+    "resnet101_training_iterative_8": {
+        "max_allocated_memory": 3238658048.0,
+        "max_reserved_memory": 3238658048.0,
+        "avg_energy_consumption": 76.16544252791412,
+        "avg_step_time": 0.04188470209587071,
+        "median_step_time": 0.04118549823760986
+    },
+    "resnet101_training_iterative_16": {
+        "max_allocated_memory": 4343857152.0,
+        "max_reserved_memory": 4343857152.0,
+        "avg_energy_consumption": 100.14267845304903,
+        "avg_step_time": 0.044562452030878,
+        "median_step_time": 0.04478049278259277
+    },
+    "resnet101_training_iterative_32": {
+        "max_allocated_memory": 6359220224.0,
+        "max_reserved_memory": 6359220224.0,
+        "avg_energy_consumption": 106.8796272998705,
+        "avg_step_time": 0.06159958803564086,
+        "median_step_time": 0.06145143508911133
+    },
+    "resnet101_training_iterative_48": {
+        "max_allocated_memory": 8397651968.0,
+        "max_reserved_memory": 8397651968.0,
+        "avg_energy_consumption": 108.10395879683404,
+        "avg_step_time": 0.09437403424095561,
+        "median_step_time": 0.09745526313781738
+    },
+    "resnet101_training_iterative_64": {
+        "max_allocated_memory": 11100880896.0,
+        "max_reserved_memory": 11100880896.0,
+        "avg_energy_consumption": 107.25903372577443,
+        "avg_step_time": 0.1279390743098308,
+        "median_step_time": 0.13024663925170898
+    },
+    "resnet101_training_iterative_80": {
+        "max_allocated_memory": 13221101568.0,
+        "max_reserved_memory": 13221101568.0,
+        "avg_energy_consumption": 108.7377485728063,
+        "avg_step_time": 0.158363301283235,
+        "median_step_time": 0.16739392280578613
+    },
+    "resnet101_training_iterative_96": {
+        "max_allocated_memory": 15624437760.0,
+        "max_reserved_memory": 15624437760.0,
+        "avg_energy_consumption": 108.82488369499926,
+        "avg_step_time": 0.19488544203341007,
+        "median_step_time": 0.20818185806274414
+    },
+    "resnet101_training_iterative_112": {
+        "max_allocated_memory": 17935499264.0,
+        "max_reserved_memory": 17935499264.0,
+        "avg_energy_consumption": 111.25037657726392,
+        "avg_step_time": 0.24213850727448097,
+        "median_step_time": 0.2452296018600464
+    },
+    "resnet101_training_iterative_128": {
+        "max_allocated_memory": 19753730048.0,
+        "max_reserved_memory": 19753730048.0,
+        "avg_energy_consumption": 110.67728356261512,
+        "avg_step_time": 0.270652501813827,
+        "median_step_time": 0.28610706329345703
+    },
+    "resnet152_training_iterative_8": {
+        "max_allocated_memory": 3901358080.0,
+        "max_reserved_memory": 3901358080.0,
+        "avg_energy_consumption": 83.07136293578326,
+        "avg_step_time": 0.05090556521425624,
+        "median_step_time": 0.048783302307128906
+    },
+    "resnet152_training_iterative_16": {
+        "max_allocated_memory": 5369364480.0,
+        "max_reserved_memory": 5369364480.0,
+        "avg_energy_consumption": 103.46907631966145,
+        "avg_step_time": 0.05258549845781449,
+        "median_step_time": 0.050582170486450195
+    },
+    "resnet152_training_iterative_32": {
+        "max_allocated_memory": 8244559872.0,
+        "max_reserved_memory": 8244559872.0,
+        "avg_energy_consumption": 108.01433230155295,
+        "avg_step_time": 0.08201004341987281,
+        "median_step_time": 0.08350563049316406
+    },
+    "resnet152_training_iterative_48": {
+        "max_allocated_memory": 11147018240.0,
+        "max_reserved_memory": 11147018240.0,
+        "avg_energy_consumption": 108.11584865739869,
+        "avg_step_time": 0.13145682420680133,
+        "median_step_time": 0.1340618133544922
+    },
+    "resnet152_training_iterative_64": {
+        "max_allocated_memory": 14701690880.0,
+        "max_reserved_memory": 14701690880.0,
+        "avg_energy_consumption": 110.32036939958508,
+        "avg_step_time": 0.17877980640956334,
+        "median_step_time": 0.1784687042236328
+    },
+    "resnet152_training_iterative_80": {
+        "max_allocated_memory": 17631412224.0,
+        "max_reserved_memory": 17631412224.0,
+        "avg_energy_consumption": 110.77618029135054,
+        "avg_step_time": 0.22332566125052317,
+        "median_step_time": 0.23018395900726318
+    },
+    "resnet152_training_iterative_96": {
+        "max_allocated_memory": 20842151936.0,
+        "max_reserved_memory": 20842151936.0,
+        "avg_energy_consumption": 112.00217937945759,
+        "avg_step_time": 0.2655638318312796,
+        "median_step_time": 0.2857069969177246
+    },
+    "resnet152_training_iterative_112": {
+        "max_allocated_memory": 24096931840.0,
+        "max_reserved_memory": 24096931840.0,
+        "avg_energy_consumption": 114.05001539441996,
+        "avg_step_time": 0.33194003786359516,
+        "median_step_time": 0.33681440353393555
+    },
+    "resnet152_training_iterative_128": {
+        "max_allocated_memory": 26535919616.0,
+        "max_reserved_memory": 26535919616.0,
+        "avg_energy_consumption": 114.70973612594338,
+        "avg_step_time": 0.37092645271964697,
+        "median_step_time": 0.39511537551879883
+    },
+    "vgg19_training_iterative_8": {
+        "max_allocated_memory": 4729733120.0,
+        "max_reserved_memory": 4729733120.0,
+        "avg_energy_consumption": 108.96550182328268,
+        "avg_step_time": 0.03110980159067279,
+        "median_step_time": 0.03074359893798828
+    },
+    "vgg19_training_iterative_16": {
+        "max_allocated_memory": 5908332544.0,
+        "max_reserved_memory": 5908332544.0,
+        "avg_energy_consumption": 108.34071765414053,
+        "avg_step_time": 0.0499669751342462,
+        "median_step_time": 0.050510525703430176
+    },
+    "vgg19_training_iterative_32": {
+        "max_allocated_memory": 7810449408.0,
+        "max_reserved_memory": 7810449408.0,
+        "avg_energy_consumption": 108.12406773420383,
+        "avg_step_time": 0.08728331474870338,
+        "median_step_time": 0.09022855758666992
+    },
+    "vgg19_training_iterative_48": {
+        "max_allocated_memory": 10538844160.0,
+        "max_reserved_memory": 10538844160.0,
+        "avg_energy_consumption": 108.15006130774492,
+        "avg_step_time": 0.12679672119568805,
+        "median_step_time": 0.13319742679595947
+    },
+    "vgg19_training_iterative_64": {
+        "max_allocated_memory": 12361269248.0,
+        "max_reserved_memory": 12361269248.0,
+        "avg_energy_consumption": 108.72553340523909,
+        "avg_step_time": 0.1602522342435775,
+        "median_step_time": 0.17484331130981445
+    },
+    "vgg19_training_iterative_80": {
+        "max_allocated_memory": 15005777920.0,
+        "max_reserved_memory": 15005777920.0,
+        "avg_energy_consumption": 109.08507265838688,
+        "avg_step_time": 0.19668283049515853,
+        "median_step_time": 0.21438169479370117
+    },
+    "vgg19_training_iterative_96": {
+        "max_allocated_memory": 17650286592.0,
+        "max_reserved_memory": 17650286592.0,
+        "avg_energy_consumption": 111.26504155963498,
+        "avg_step_time": 0.24191935016558722,
+        "median_step_time": 0.2554936408996582
+    },
+    "vgg19_training_iterative_112": {
+        "max_allocated_memory": 18724028416.0,
+        "max_reserved_memory": 18724028416.0,
+        "avg_energy_consumption": 110.80121345447571,
+        "avg_step_time": 0.27986923853556317,
+        "median_step_time": 0.29875242710113525
+    },
+    "vgg19_training_iterative_128": {
+        "max_allocated_memory": 20544356352.0,
+        "max_reserved_memory": 20544356352.0,
+        "avg_energy_consumption": 111.25878329400652,
+        "avg_step_time": 0.3149065852165222,
+        "median_step_time": 0.34761250019073486
+    },
+    "lstm_training_iterative_8": {
+        "max_allocated_memory": 2078932992.0,
+        "max_reserved_memory": 2078932992.0,
+        "avg_energy_consumption": 85.16230030259972,
+        "avg_step_time": 0.00758517159722668,
+        "median_step_time": 0.007489919662475586
+    },
+    "lstm_training_iterative_16": {
+        "max_allocated_memory": 2078932992.0,
+        "max_reserved_memory": 2078932992.0,
+        "avg_energy_consumption": 76.79143812763063,
+        "avg_step_time": 0.012030210555006086,
+        "median_step_time": 0.011842489242553711
+    },
+    "lstm_training_iterative_32": {
+        "max_allocated_memory": 2078932992.0,
+        "max_reserved_memory": 2078932992.0,
+        "avg_energy_consumption": 81.14871687043507,
+        "avg_step_time": 0.012205385478438845,
+        "median_step_time": 0.011589646339416504
+    },
+    "lstm_training_iterative_48": {
+        "max_allocated_memory": 2078932992.0,
+        "max_reserved_memory": 2078932992.0,
+        "avg_energy_consumption": 70.92456879053,
+        "avg_step_time": 0.021153183195326063,
+        "median_step_time": 0.020789623260498047
+    },
+    "lstm_training_iterative_64": {
+        "max_allocated_memory": 2078932992.0,
+        "max_reserved_memory": 2078932992.0,
+        "avg_energy_consumption": 67.52499833990703,
+        "avg_step_time": 0.029118634076510073,
+        "median_step_time": 0.02950739860534668
+    },
+    "lstm_training_iterative_80": {
+        "max_allocated_memory": 2078932992.0,
+        "max_reserved_memory": 2078932992.0,
+        "avg_energy_consumption": 68.27493053425063,
+        "avg_step_time": 0.034950699174094955,
+        "median_step_time": 0.035288095474243164
+    },
+    "lstm_training_iterative_96": {
+        "max_allocated_memory": 1938423808.0,
+        "max_reserved_memory": 1938423808.0,
+        "avg_energy_consumption": 68.40261568132293,
+        "avg_step_time": 0.039186021556024964,
+        "median_step_time": 0.04052567481994629
+    },
+    "lstm_training_iterative_112": {
+        "max_allocated_memory": 1938423808.0,
+        "max_reserved_memory": 1938423808.0,
+        "avg_energy_consumption": 69.10489851963099,
+        "avg_step_time": 0.041669386268680934,
+        "median_step_time": 0.042183637619018555
+    },
+    "lstm_training_iterative_128": {
+        "max_allocated_memory": 2102001664.0,
+        "max_reserved_memory": 2102001664.0,
+        "avg_energy_consumption": 70.21229150435181,
+        "avg_step_time": 0.04655407814752488,
+        "median_step_time": 0.04737424850463867
+    },
+    "resnet18_inference_iterative_8": {
+        "max_allocated_memory": 1223294976.0,
+        "max_reserved_memory": 1223294976.0,
+        "avg_energy_consumption": 45.82597991754042,
+        "avg_step_time": 0.004603318192127315,
+        "median_step_time": 0.004410743713378906
+    },
+    "resnet18_inference_iterative_16": {
+        "max_allocated_memory": 1323958272.0,
+        "max_reserved_memory": 1323958272.0,
+        "avg_energy_consumption": 54.30061779769033,
+        "avg_step_time": 0.005266305523440469,
+        "median_step_time": 0.005010008811950684
+    },
+    "resnet18_inference_iterative_32": {
+        "max_allocated_memory": 1393164288.0,
+        "max_reserved_memory": 1393164288.0,
+        "avg_energy_consumption": 71.18053725823222,
+        "avg_step_time": 0.008250298070125893,
+        "median_step_time": 0.007889866828918457
+    },
+    "resnet18_inference_iterative_48": {
+        "max_allocated_memory": 1506410496.0,
+        "max_reserved_memory": 1506410496.0,
+        "avg_energy_consumption": 74.2672718817839,
+        "avg_step_time": 0.01242927856115749,
+        "median_step_time": 0.011661887168884277
+    },
+    "resnet18_inference_iterative_64": {
+        "max_allocated_memory": 1619656704.0,
+        "max_reserved_memory": 1619656704.0,
+        "avg_energy_consumption": 75.23532231354373,
+        "avg_step_time": 0.016567361127682447,
+        "median_step_time": 0.015828609466552734
+    },
+    "resnet18_inference_iterative_80": {
+        "max_allocated_memory": 1730805760.0,
+        "max_reserved_memory": 1730805760.0,
+        "avg_energy_consumption": 76.78977071085457,
+        "avg_step_time": 0.02085742532161244,
+        "median_step_time": 0.019678473472595215
+    },
+    "resnet18_inference_iterative_96": {
+        "max_allocated_memory": 1841954816.0,
+        "max_reserved_memory": 1841954816.0,
+        "avg_energy_consumption": 77.60011115895986,
+        "avg_step_time": 0.025107715017508463,
+        "median_step_time": 0.024364709854125977
+    },
+    "resnet18_inference_iterative_112": {
+        "max_allocated_memory": 1957298176.0,
+        "max_reserved_memory": 1957298176.0,
+        "avg_energy_consumption": 79.52852331257834,
+        "avg_step_time": 0.029265179506783347,
+        "median_step_time": 0.02883756160736084
+    },
+    "resnet18_inference_iterative_128": {
+        "max_allocated_memory": 2066350080.0,
+        "max_reserved_memory": 2066350080.0,
+        "avg_energy_consumption": 78.92494248238651,
+        "avg_step_time": 0.03374310688720108,
+        "median_step_time": 0.0330662727355957
+    },
+    "resnet34_inference_iterative_8": {
+        "max_allocated_memory": 1267335168.0,
+        "max_reserved_memory": 1267335168.0,
+        "avg_energy_consumption": 50.870229512074474,
+        "avg_step_time": 0.00616242947605993,
+        "median_step_time": 0.005930185317993164
+    },
+    "resnet34_inference_iterative_16": {
+        "max_allocated_memory": 1315569664.0,
+        "max_reserved_memory": 1315569664.0,
+        "avg_energy_consumption": 61.58065368072827,
+        "avg_step_time": 0.0071398306565868454,
+        "median_step_time": 0.006862640380859375
+    },
+    "resnet34_inference_iterative_32": {
+        "max_allocated_memory": 1437204480.0,
+        "max_reserved_memory": 1437204480.0,
+        "avg_energy_consumption": 84.70849468158859,
+        "avg_step_time": 0.009984409919735399,
+        "median_step_time": 0.009640693664550781
+    },
+    "resnet34_inference_iterative_48": {
+        "max_allocated_memory": 1550450688.0,
+        "max_reserved_memory": 1550450688.0,
+        "avg_energy_consumption": 90.5826195531129,
+        "avg_step_time": 0.014396408419588428,
+        "median_step_time": 0.013921976089477539
+    },
+    "resnet34_inference_iterative_64": {
+        "max_allocated_memory": 1663696896.0,
+        "max_reserved_memory": 1663696896.0,
+        "avg_energy_consumption": 92.27085355455519,
+        "avg_step_time": 0.018501316810810884,
+        "median_step_time": 0.017958760261535645
+    },
+    "resnet34_inference_iterative_80": {
+        "max_allocated_memory": 1774845952.0,
+        "max_reserved_memory": 1774845952.0,
+        "avg_energy_consumption": 92.61291177971702,
+        "avg_step_time": 0.023687848478260606,
+        "median_step_time": 0.02313518524169922
+    },
+    "resnet34_inference_iterative_96": {
+        "max_allocated_memory": 1885995008.0,
+        "max_reserved_memory": 1885995008.0,
+        "avg_energy_consumption": 89.42503803712391,
+        "avg_step_time": 0.03053549357822963,
+        "median_step_time": 0.0301969051361084
+    },
+    "resnet34_inference_iterative_112": {
+        "max_allocated_memory": 2001338368.0,
+        "max_reserved_memory": 2001338368.0,
+        "avg_energy_consumption": 90.44216554911371,
+        "avg_step_time": 0.03419581925751292,
+        "median_step_time": 0.03368067741394043
+    },
+    "resnet34_inference_iterative_128": {
+        "max_allocated_memory": 2110390272.0,
+        "max_reserved_memory": 2110390272.0,
+        "avg_energy_consumption": 88.57664109482178,
+        "avg_step_time": 0.03952421344719924,
+        "median_step_time": 0.039013028144836426
+    },
+    "resnet50_inference_iterative_8": {
+        "max_allocated_memory": 1468661760.0,
+        "max_reserved_memory": 1468661760.0,
+        "avg_energy_consumption": 56.51331288752145,
+        "avg_step_time": 0.00796389812250437,
+        "median_step_time": 0.0076525211334228516
+    },
+    "resnet50_inference_iterative_16": {
+        "max_allocated_memory": 1590296576.0,
+        "max_reserved_memory": 1590296576.0,
+        "avg_energy_consumption": 87.999340651877,
+        "avg_step_time": 0.00898937475360154,
+        "median_step_time": 0.008639812469482422
+    },
+    "resnet50_inference_iterative_32": {
+        "max_allocated_memory": 1791623168.0,
+        "max_reserved_memory": 1791623168.0,
+        "avg_energy_consumption": 101.11165311640276,
+        "avg_step_time": 0.01592183518021003,
+        "median_step_time": 0.015506625175476074
+    },
+    "resnet50_inference_iterative_48": {
+        "max_allocated_memory": 1875509248.0,
+        "max_reserved_memory": 1875509248.0,
+        "avg_energy_consumption": 101.6392687244808,
+        "avg_step_time": 0.025451953944573346,
+        "median_step_time": 0.024980545043945312
+    },
+    "resnet50_inference_iterative_64": {
+        "max_allocated_memory": 2294939648.0,
+        "max_reserved_memory": 2294939648.0,
+        "avg_energy_consumption": 100.8975490525133,
+        "avg_step_time": 0.034457731314680794,
+        "median_step_time": 0.03412771224975586
+    },
+    "resnet50_inference_iterative_80": {
+        "max_allocated_memory": 2305425408.0,
+        "max_reserved_memory": 2305425408.0,
+        "avg_energy_consumption": 100.96292383080919,
+        "avg_step_time": 0.044150925889799866,
+        "median_step_time": 0.04382443428039551
+    },
+    "resnet50_inference_iterative_96": {
+        "max_allocated_memory": 2827616256.0,
+        "max_reserved_memory": 2827616256.0,
+        "avg_energy_consumption": 100.72270604391305,
+        "avg_step_time": 0.05487355396518238,
+        "median_step_time": 0.05511140823364258
+    },
+    "resnet50_inference_iterative_112": {
+        "max_allocated_memory": 2737438720.0,
+        "max_reserved_memory": 2737438720.0,
+        "avg_energy_consumption": 101.85883865251267,
+        "avg_step_time": 0.06405399180948734,
+        "median_step_time": 0.06501257419586182
+    },
+    "resnet50_inference_iterative_128": {
+        "max_allocated_memory": 3360292864.0,
+        "max_reserved_memory": 3360292864.0,
+        "avg_energy_consumption": 101.7522131224807,
+        "avg_step_time": 0.0733515073855718,
+        "median_step_time": 0.07489967346191406
+    },
+    "resnet101_inference_iterative_8": {
+        "max_allocated_memory": 1518993408.0,
+        "max_reserved_memory": 1518993408.0,
+        "avg_energy_consumption": 58.25991313873828,
+        "avg_step_time": 0.01367178873658953,
+        "median_step_time": 0.013261556625366211
+    },
+    "resnet101_inference_iterative_16": {
+        "max_allocated_memory": 1646919680.0,
+        "max_reserved_memory": 1646919680.0,
+        "avg_energy_consumption": 92.14689298772076,
+        "avg_step_time": 0.014493515273392682,
+        "median_step_time": 0.014102458953857422
+    },
+    "resnet101_inference_iterative_32": {
+        "max_allocated_memory": 1869217792.0,
+        "max_reserved_memory": 1869217792.0,
+        "avg_energy_consumption": 107.86470362085568,
+        "avg_step_time": 0.020926937683695957,
+        "median_step_time": 0.020380735397338867
+    },
+    "resnet101_inference_iterative_48": {
+        "max_allocated_memory": 1953103872.0,
+        "max_reserved_memory": 1953103872.0,
+        "avg_energy_consumption": 101.99274890288626,
+        "avg_step_time": 0.03352068238898102,
+        "median_step_time": 0.03323221206665039
+    },
+    "resnet101_inference_iterative_64": {
+        "max_allocated_memory": 2372534272.0,
+        "max_reserved_memory": 2372534272.0,
+        "avg_energy_consumption": 102.23610063472566,
+        "avg_step_time": 0.04472812715467516,
+        "median_step_time": 0.04436218738555908
+    },
+    "resnet101_inference_iterative_80": {
+        "max_allocated_memory": 2383020032.0,
+        "max_reserved_memory": 2383020032.0,
+        "avg_energy_consumption": 102.16735884442649,
+        "avg_step_time": 0.057358600825906915,
+        "median_step_time": 0.05783712863922119
+    },
+    "resnet101_inference_iterative_96": {
+        "max_allocated_memory": 2907308032.0,
+        "max_reserved_memory": 2907308032.0,
+        "avg_energy_consumption": 102.31540650189547,
+        "avg_step_time": 0.07205029816655388,
+        "median_step_time": 0.07336640357971191
+    },
+    "resnet101_inference_iterative_112": {
+        "max_allocated_memory": 2817130496.0,
+        "max_reserved_memory": 2817130496.0,
+        "avg_energy_consumption": 103.77264366333887,
+        "avg_step_time": 0.08605509186455597,
+        "median_step_time": 0.08784055709838867
+    },
+    "resnet101_inference_iterative_128": {
+        "max_allocated_memory": 3439984640.0,
+        "max_reserved_memory": 3439984640.0,
+        "avg_energy_consumption": 102.80315053334242,
+        "avg_step_time": 0.09894161701202392,
+        "median_step_time": 0.10173356533050537
+    },
+    "resnet152_inference_iterative_8": {
+        "max_allocated_memory": 1594490880.0,
+        "max_reserved_memory": 1594490880.0,
+        "avg_energy_consumption": 58.78420239013365,
+        "avg_step_time": 0.019147962548603622,
+        "median_step_time": 0.01852869987487793
+    },
+    "resnet152_inference_iterative_16": {
+        "max_allocated_memory": 1720320000.0,
+        "max_reserved_memory": 1720320000.0,
+        "avg_energy_consumption": 91.12379544223117,
+        "avg_step_time": 0.020729606839606528,
+        "median_step_time": 0.020184040069580078
+    },
+    "resnet152_inference_iterative_32": {
+        "max_allocated_memory": 1921646592.0,
+        "max_reserved_memory": 1921646592.0,
+        "avg_energy_consumption": 106.98922176404336,
+        "avg_step_time": 0.026508267685491693,
+        "median_step_time": 0.026122570037841797
+    },
+    "resnet152_inference_iterative_48": {
+        "max_allocated_memory": 2007629824.0,
+        "max_reserved_memory": 2007629824.0,
+        "avg_energy_consumption": 102.72909508397235,
+        "avg_step_time": 0.04334906362936721,
+        "median_step_time": 0.04314470291137695
+    },
+    "resnet152_inference_iterative_64": {
+        "max_allocated_memory": 2427060224.0,
+        "max_reserved_memory": 2427060224.0,
+        "avg_energy_consumption": 104.02018505476236,
+        "avg_step_time": 0.057224671601693394,
+        "median_step_time": 0.057727813720703125
+    },
+    "resnet152_inference_iterative_80": {
+        "max_allocated_memory": 2437545984.0,
+        "max_reserved_memory": 2437545984.0,
+        "avg_energy_consumption": 103.89499688802321,
+        "avg_step_time": 0.07358426193692791,
+        "median_step_time": 0.07529425621032715
+    },
+    "resnet152_inference_iterative_96": {
+        "max_allocated_memory": 2959736832.0,
+        "max_reserved_memory": 2959736832.0,
+        "avg_energy_consumption": 106.1894136224744,
+        "avg_step_time": 0.09225001175012161,
+        "median_step_time": 0.09615504741668701
+    },
+    "resnet152_inference_iterative_112": {
+        "max_allocated_memory": 2869559296.0,
+        "max_reserved_memory": 2869559296.0,
+        "avg_energy_consumption": 106.47622579775222,
+        "avg_step_time": 0.11208197434024034,
+        "median_step_time": 0.11574411392211914
+    },
+    "resnet152_inference_iterative_128": {
+        "max_allocated_memory": 3492413440.0,
+        "max_reserved_memory": 3492413440.0,
+        "avg_energy_consumption": 107.60679222662542,
+        "avg_step_time": 0.12862311620168734,
+        "median_step_time": 0.13348007202148438
+    },
+    "vgg19_inference_iterative_8": {
+        "max_allocated_memory": 2011824128.0,
+        "max_reserved_memory": 2011824128.0,
+        "avg_energy_consumption": 104.0932488220892,
+        "avg_step_time": 0.007469870531518305,
+        "median_step_time": 0.00724637508392334
+    },
+    "vgg19_inference_iterative_16": {
+        "max_allocated_memory": 2527723520.0,
+        "max_reserved_memory": 2527723520.0,
+        "avg_energy_consumption": 105.4090919427518,
+        "avg_step_time": 0.014457753250718783,
+        "median_step_time": 0.014161109924316406
+    },
+    "vgg19_inference_iterative_32": {
+        "max_allocated_memory": 2957639680.0,
+        "max_reserved_memory": 2957639680.0,
+        "avg_energy_consumption": 104.84669268911784,
+        "avg_step_time": 0.029618627162067437,
+        "median_step_time": 0.02924633026123047
+    },
+    "vgg19_inference_iterative_48": {
+        "max_allocated_memory": 4201250816.0,
+        "max_reserved_memory": 4201250816.0,
+        "avg_energy_consumption": 103.83416570339269,
+        "avg_step_time": 0.044399411895058374,
+        "median_step_time": 0.044303178787231445
+    },
+    "vgg19_inference_iterative_64": {
+        "max_allocated_memory": 5035917312.0,
+        "max_reserved_memory": 5035917312.0,
+        "avg_energy_consumption": 104.7053946468105,
+        "avg_step_time": 0.06037369348493196,
+        "median_step_time": 0.0609135627746582
+    },
+    "vgg19_inference_iterative_80": {
+        "max_allocated_memory": 4834590720.0,
+        "max_reserved_memory": 4834590720.0,
+        "avg_energy_consumption": 105.01576675394024,
+        "avg_step_time": 0.07226774909279564,
+        "median_step_time": 0.07345938682556152
+    },
+    "vgg19_inference_iterative_96": {
+        "max_allocated_memory": 5461639168.0,
+        "max_reserved_memory": 5461639168.0,
+        "avg_energy_consumption": 105.5935979885427,
+        "avg_step_time": 0.08546038729921757,
+        "median_step_time": 0.08786582946777344
+    },
+    "vgg19_inference_iterative_112": {
+        "max_allocated_memory": 6088687616.0,
+        "max_reserved_memory": 6088687616.0,
+        "avg_energy_consumption": 105.63276817795054,
+        "avg_step_time": 0.09855685576024759,
+        "median_step_time": 0.10272669792175293
+    },
+    "vgg19_inference_iterative_128": {
+        "max_allocated_memory": 6713638912.0,
+        "max_reserved_memory": 6713638912.0,
+        "avg_energy_consumption": 106.02026814531071,
+        "avg_step_time": 0.11421260745843984,
+        "median_step_time": 0.11758208274841309
+    },
+    "lstm_inference_iterative_8": {
+        "max_allocated_memory": 1598685184.0,
+        "max_reserved_memory": 1598685184.0,
+        "avg_energy_consumption": 49.156909418164595,
+        "avg_step_time": 0.0018894385570218674,
+        "median_step_time": 0.0016641616821289062
+    },
+    "lstm_inference_iterative_16": {
+        "max_allocated_memory": 1598685184.0,
+        "max_reserved_memory": 1598685184.0,
+        "avg_energy_consumption": 62.81571852308686,
+        "avg_step_time": 0.002428518889769058,
+        "median_step_time": 0.0022821426391601562
+    },
+    "lstm_inference_iterative_32": {
+        "max_allocated_memory": 1598685184.0,
+        "max_reserved_memory": 1598685184.0,
+        "avg_energy_consumption": 70.83476819045423,
+        "avg_step_time": 0.003717566931719624,
+        "median_step_time": 0.003556489944458008
+    },
+    "lstm_inference_iterative_48": {
+        "max_allocated_memory": 1598685184.0,
+        "max_reserved_memory": 1598685184.0,
+        "avg_energy_consumption": 70.50741898544779,
+        "avg_step_time": 0.005005707466419995,
+        "median_step_time": 0.004785060882568359
+    },
+    "lstm_inference_iterative_64": {
+        "max_allocated_memory": 1598685184.0,
+        "max_reserved_memory": 1598685184.0,
+        "avg_energy_consumption": 71.91164680993688,
+        "avg_step_time": 0.006293955447043721,
+        "median_step_time": 0.006038188934326172
+    },
+    "lstm_inference_iterative_80": {
+        "max_allocated_memory": 1598685184.0,
+        "max_reserved_memory": 1598685184.0,
+        "avg_energy_consumption": 71.26672768602327,
+        "avg_step_time": 0.007623847695669422,
+        "median_step_time": 0.007337808609008789
+    },
+    "lstm_inference_iterative_96": {
+        "max_allocated_memory": 1762263040.0,
+        "max_reserved_memory": 1762263040.0,
+        "avg_energy_consumption": 71.01505863819673,
+        "avg_step_time": 0.008978440196638605,
+        "median_step_time": 0.008643746376037598
+    },
+    "lstm_inference_iterative_112": {
+        "max_allocated_memory": 1762263040.0,
+        "max_reserved_memory": 1762263040.0,
+        "avg_energy_consumption": 74.71451033367282,
+        "avg_step_time": 0.010103445491816328,
+        "median_step_time": 0.009781360626220703
+    },
+    "lstm_inference_iterative_128": {
+        "max_allocated_memory": 1762263040.0,
+        "max_reserved_memory": 1762263040.0,
+        "avg_energy_consumption": 76.45973258576426,
+        "avg_step_time": 0.011891253995154187,
+        "median_step_time": 0.011477351188659668
+    },
+    "sgd": {
+        "max_allocated_memory": 2048000000.0,
+        "max_reserved_memory": 2048000000.0,
+        "avg_energy_consumption": 0.0,
+        "avg_step_time": 0.145,
+        "median_step_time": 0.145
+    },
+    "pr": {
+        "max_allocated_memory": 2048000000.0,
+        "max_reserved_memory": 2048000000.0,
+        "avg_energy_consumption": 0.0,
+        "avg_step_time": 0.0035,
+        "median_step_time": 0.0035
+    },
+    "image": {
+        "max_allocated_memory": 11177295872.0,
+        "max_reserved_memory": 11177295872.0,
+        "avg_energy_consumption": 0.0,
+        "avg_step_time": 0.047,
+        "median_step_time": 0.047
+    }
+}
