@@ -1,18 +1,20 @@
-# Artifact Evaluation
+# Artifact Evaluation for FreeRide: Harvesting Bubbles in Pipeline Parallelism
 
-This is the artifact for the paper ~FreeRide: Harvesting Bubbles in Pipeline Parallelism~ by Jiashu Zhang, Zihan Pan, Molly (Yiming) Xu, Khuzaima Daudjee, and Sihang Liu.
+This is the artifact for the paper *FreeRide: Harvesting Bubbles in Pipeline Parallelism* by Jiashu Zhang, Zihan Pan, Molly (Yiming) Xu, Khuzaima Daudjee, and Sihang Liu.
+
+For more details, please refer to the paper and this link: [https://github.com/jiashu-z/freeride](https://github.com/jiashu-z/freeride).
 
 # File Structure
 
 - `ae`: Scripts for running experiments for the artifact evaluation.
+- `config`: Configuration file template used by DeepSpeed.
 - `data`: This is for the experiment data, including profiling of bubbles and side tasks.
 - `DeepSpeed`: This is for the instrumented DeepSpeed 0.12.2.
 - `experiment`: This is the experiment scripts.
 - `log`: Directory for intermeidate outputs and profiling results.
 - `side_task`: This is the implementation of side tasks.
-- `src`: This is the implementation of FreeRide.
-- `src1`: This is the scripts of running DeepSpeed.
-- `vanilla_gpu_workload`: This is the implementation of the vanilla form of the GPU side tasks.
+- `src`: Implementation of FreeRide.
+- `src1`: Scripts of running DeepSpeed.
 
 # Hardware Setup
 
@@ -84,7 +86,7 @@ You should see something like this.
 Please make sure that CUDA version is 12.1.
 
 ```
-(freeride) root@cd4b629f2bb9:/workspace/freeride# ds_report
+(freeride) root@cd4b629f2bb9:/workspace/bubblebandit# ds_report
 /root/miniconda3/envs/freeride/bin/ds_report:4: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
   __import__('pkg_resources').require('deepspeed==0.12.2+fdd85804')
 [2025-10-03 02:43:47,607] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
@@ -130,7 +132,7 @@ transformer_inference .. [NO] ....... [OKAY]
 DeepSpeed general environment info:
 torch install path ............... ['/root/miniconda3/envs/freeride/lib/python3.11/site-packages/torch']
 torch version .................... 2.1.2+cu121
-deepspeed install path ........... ['/workspace/freeride/DeepSpeed/deepspeed']
+deepspeed install path ........... ['/workspace/bubblebandit/DeepSpeed/deepspeed']
 deepspeed info ................... 0.12.2+fdd85804, fdd85804, HEAD
 torch cuda version ............... 12.1
 torch hip version ................ None
@@ -227,6 +229,36 @@ python3 ae/vanilla_deepspeed_profile/analyze_bubbles.py
 
 This script will generate a CSV file in each directory, which contains the summary of bubbles.
 
+# Profiling of Side Tasks
+
+Run the following script to profile the side tasks for their performance and GPU memory consumption.
+
+```bash
+export CUDA_HOME=$CONDA_PREFIX
+python3 ae/profile_side_task/run.py
+```
+
+This script will run side tasks, including resnet18, resnet50, and vgg19 model training with different batch sizes for Python workloads and image resizing, pagerank, and sgd for C++ workloads. Step time and memory consumption of side tasks will be collected with nvml.
+After it finishes, you will see the output as four files for each side task.
+
+```
+(freeride) root@cd4b629f2bb9:/workspace/bubblebandit# ls schedule_ada6000_resnet18_training_iterative_16_*
+schedule_ada6000_resnet18_training_iterative_16_0_side_task.txt
+schedule_ada6000_resnet18_training_iterative_16_0_task.log
+schedule_ada6000_resnet18_training_iterative_16_bubble_time.txt
+schedule_ada6000_resnet18_training_iterative_16_monitor.txt
+schedule_ada6000_resnet18_training_iterative_16_scheduler.log
+schedule_ada6000_resnet18_training_iterative_16_time_profile_0.txt
+```
+
+Run the following script to analyze the side tasks and generate side task summary.
+
+```bash
+python3 ae/profile_side_task/process_results.py
+```
+
+This script will generate a json file with name `iterative_summary_ada6000.json` containing the summary of side tasks
+
 # Run Vanilla DeepSpeed as Baseline
 
 Install vanilla DeepSpeed 0.12.2.
@@ -250,16 +282,6 @@ You will see the output json files in the `log` directory.
 They are the performance measurements from 4 pipeline stages.
 We use stage 0 as the final result.
 The training time is found in the `time` field of the performance measurement outputs.
-
-# Profile Side Tasks
-
-Run the following command to profile the side tasks for their performance and GPU memory consumption.
-
-```bash
-python3 ae/profile_side_task/run.py
-```
-
-After it finishes, you will see the 
 
 # Run DeepSpeed with Side Tasks
 
@@ -292,26 +314,26 @@ It will use the bubble profiling results from `log`.
 After it finishes, you will see something like this from the terminal.
 
 ```
-2025-10-03 03:26:47,440 - INFO - /workspace/freeride/ae/side_task_deepspeed/run_side_task.py:170 - Running e2e_freeride_ada6000_xlarge_resnet18_training_iterative_64_4 finished
-2025-10-03 03:26:47,441 - INFO - /workspace/freeride/src/freeride/logger.py:196 - Received 2, stopping logger
-2025-10-03 03:26:47,441 - INFO - /workspace/freeride/src/freeride/logger.py:151 - Stop logger on addr localhost:40051
-2025-10-03 03:26:47,442 - INFO - /workspace/freeride/ae/side_task_deepspeed/run_side_task.py:178 - Signal sent
-2025-10-03 03:26:47,441 - INFO - /workspace/freeride/src/freeride/task_runner.py:203 - Received 2, stopping task_runner
-2025-10-03 03:26:47,441 - INFO - /workspace/freeride/src/freeride/task_runner.py:203 - Received 2, stopping task_runner
-2025-10-03 03:26:47,441 - INFO - /workspace/freeride/src/freeride/task_runner.py:203 - Received 2, stopping task_runner
-2025-10-03 03:26:47,441 - INFO - /workspace/freeride/src/freeride/task_runner.py:203 - Received 2, stopping task_runner
-2025-10-03 03:26:47,442 - INFO - /workspace/freeride/src/freeride/logger.py:198 - Logger stopped
-2025-10-03 03:26:48,232 - INFO - /workspace/freeride/src/freeride/task_runner.py:205 - task_runner stopped
-2025-10-03 03:26:48,488 - INFO - /workspace/freeride/src/freeride/task_runner.py:205 - task_runner stopped
-2025-10-03 03:26:48,782 - INFO - /workspace/freeride/src/freeride/task_runner.py:205 - task_runner stopped
-2025-10-03 03:26:48,982 - INFO - /workspace/freeride/src/freeride/task_runner.py:205 - task_runner stopped
-2025-10-03 03:26:49,502 - INFO - /workspace/freeride/ae/side_task_deepspeed/run_side_task.py:188 - Clean up e2e_freeride_ada6000_xlarge_resnet18_training_iterative_64_4 finished
+2025-10-03 03:26:47,440 - INFO - /workspace/bubblebandit/ae/side_task_deepspeed/run_side_task.py:170 - Running e2e_freeride_ada6000_xlarge_resnet18_training_iterative_64_4 finished
+2025-10-03 03:26:47,441 - INFO - /workspace/bubblebandit/src/bubblebandit/logger.py:196 - Received 2, stopping logger
+2025-10-03 03:26:47,441 - INFO - /workspace/bubblebandit/src/bubblebandit/logger.py:151 - Stop logger on addr localhost:40051
+2025-10-03 03:26:47,442 - INFO - /workspace/bubblebandit/ae/side_task_deepspeed/run_side_task.py:178 - Signal sent
+2025-10-03 03:26:47,441 - INFO - /workspace/bubblebandit/src/bubblebandit/task_runner.py:203 - Received 2, stopping task_runner
+2025-10-03 03:26:47,441 - INFO - /workspace/bubblebandit/src/bubblebandit/task_runner.py:203 - Received 2, stopping task_runner
+2025-10-03 03:26:47,441 - INFO - /workspace/bubblebandit/src/bubblebandit/task_runner.py:203 - Received 2, stopping task_runner
+2025-10-03 03:26:47,441 - INFO - /workspace/bubblebandit/src/bubblebandit/task_runner.py:203 - Received 2, stopping task_runner
+2025-10-03 03:26:47,442 - INFO - /workspace/bubblebandit/src/bubblebandit/logger.py:198 - Logger stopped
+2025-10-03 03:26:48,232 - INFO - /workspace/bubblebandit/src/bubblebandit/task_runner.py:205 - task_runner stopped
+2025-10-03 03:26:48,488 - INFO - /workspace/bubblebandit/src/bubblebandit/task_runner.py:205 - task_runner stopped
+2025-10-03 03:26:48,782 - INFO - /workspace/bubblebandit/src/bubblebandit/task_runner.py:205 - task_runner stopped
+2025-10-03 03:26:48,982 - INFO - /workspace/bubblebandit/src/bubblebandit/task_runner.py:205 - task_runner stopped
+2025-10-03 03:26:49,502 - INFO - /workspace/bubblebandit/ae/side_task_deepspeed/run_side_task.py:188 - Clean up e2e_freeride_ada6000_xlarge_resnet18_training_iterative_64_4 finished
 ```
 
 The output files below contain the progress of each side task.
 
 ```bash
-(freeride) root@cd4b629f2bb9:/workspace/freeride# ls e2e_freeride_ada6000_xlarge_resnet18_training_iterative_64_4_*_side_task.txt
+(freeride) root@cd4b629f2bb9:/workspace/bubblebandit# ls e2e_freeride_ada6000_xlarge_resnet18_training_iterative_64_4_*_side_task.txt
 e2e_freeride_ada6000_xlarge_resnet18_training_iterative_64_4_0_side_task.txt
 e2e_freeride_ada6000_xlarge_resnet18_training_iterative_64_4_1_side_task.txt
 e2e_freeride_ada6000_xlarge_resnet18_training_iterative_64_4_2_side_task.txt
@@ -321,7 +343,7 @@ e2e_freeride_ada6000_xlarge_resnet18_training_iterative_64_4_3_side_task.txt
 These files contain the progress of each side task.
 
 ```bash
-(freeride) root@cd4b629f2bb9:/workspace/freeride# ls e2e_freeride_ada6000_xlarge_resnet18_training_iterative_64_4_128_stage*.json
+(freeride) root@cd4b629f2bb9:/workspace/bubblebandit# ls e2e_freeride_ada6000_xlarge_resnet18_training_iterative_64_4_128_stage*.json
 e2e_freeride_ada6000_xlarge_resnet18_training_iterative_64_4_128_stage0.json
 e2e_freeride_ada6000_xlarge_resnet18_training_iterative_64_4_128_stage1.json
 e2e_freeride_ada6000_xlarge_resnet18_training_iterative_64_4_128_stage2.json
@@ -345,3 +367,33 @@ We focus on the `time` field, which measures the time in seconds taken by the pi
  "end": 1759462002.3289511
 }
 ```
+
+# Calculate Overhead and Cost Savings
+
+After collecting output of freeride deepspeed with side tasks and vanilla deepspeed, run the notebook `ae/collect_experiment_data/analyze_cost.ipynb` to parse the output time and side task progress. It will calculate the overhead and cost saving of freeride on each side task.
+
+```
+resnet18: hourly_cost: 20.226, main-task overhead: 0.03%, dollar saving: 8.07%
+resnet50: hourly_cost: 20.7151, main-task overhead: 1.36%, dollar saving: 5.92%
+vgg19: hourly_cost: 20.85, main-task overhead: 2.1%, dollar saving: 5.34%
+sgd: hourly_cost: 17.6782, main-task overhead: 1.16%, dollar saving: 19.87%
+pr: hourly_cost: 21.3282, main-task overhead: 0.05%, dollar saving: 3.06%
+image: hourly_cost: 20.9415, main-task overhead: 0.74%, dollar saving: 4.85%
+Mix_task(pr): side_task_progress: 12107
+Mix_task(resnet18): side_task_progress: 217152
+Mix_task(image): side_task_progress: 1597
+Mix_task(vgg19): side_task_progress: 64448
+Mix_task(all): main-task overhead: 1.57%, dollar saving: 6.15%
+```
+
+The output contain hourly cost, main task ovehead, and dollar saving for each single task and side task progress, main task overhead, and total dollar saving for mixed task.
+
+
+Run the following command to analyze these traces.
+
+
+```bash
+python3 ae/collect_experiment_data/analyze_cost.ipynb
+```
+
+The script `ae/collect_experiment_data/analyze_cost.ipynb` parses the traces and mark the bubble characteristics, including bubble types, bubble duration, and available memory.
